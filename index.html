@@ -3,38 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Calculator App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="calculator">
-    <div class="display" id="display">0</div>
-    <div class="buttons">
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('/')">/</button>
+  <div class="app-container">
+    <header class="top-bar">
+      <h1>Calculator</h1>
+      <button id="themeToggle" class="theme-toggle">Dark mode</button>
+    </header>
 
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="appendValue('*')">×</button>
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="/" class="op">÷</button>
 
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-      <button onclick="appendValue('-')">-</button>
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="*" class="op">×</button>
 
-      <button onclick="appendValue('0')">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button class="equal" onclick="calculate()">=</button>
-      <button class="clear" onclick="clearDisplay()">C</button>
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="-" class="op">−</button>
 
-      <button onclick="appendValue('+')" style="grid-column: span 2;">+</button>
-      <button class="backspace" onclick="backspace()">⌫</button>
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button id="equalBtn" class="equal">=</button>
+        <button id="clearBtn" class="clear">C</button>
+
+        <button data-value="+" class="op wide">+</button>
+        <button id="backspaceBtn" class="backspace">⌫</button>
+      </div>
     </div>
   </div>
 
+  <!-- optional click sound (short, quiet) -->
+  <audio id="clickSound">
+    <source src="" type="audio/mpeg">
+    <!-- leave src empty, you can add your own mp3 file path later -->
+  </audio>
+
   <script src="script.js"></script>
-    
 </body>
 </html>
