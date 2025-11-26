@@ -4,13 +4,13 @@
 }
 
 html, body {
-  height: 100%;
+  height: 95%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background: #111;
   color: #fff;
 }
@@ -171,3 +171,4 @@ body.light button:hover {
     font-size: 0.8rem;
   }
 }
+
