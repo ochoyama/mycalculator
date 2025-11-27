@@ -13,6 +13,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   background: #111;
   color: #fff;
+  font-weight:bolder;
 }
 
 /* App container fills screen */
@@ -20,7 +21,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background:#fff;
+  background:#4b4545;
 }
 
 /* Top bar */
@@ -81,6 +82,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(70px, 1fr);
   gap: 10px;
+  background:#fff;
 }
 
 /* Buttons base */
@@ -172,5 +174,6 @@ body.light button:hover {
     font-size: 0.8rem;
   }
 }
+
 
 
