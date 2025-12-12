@@ -53,6 +53,7 @@ function backspace() {
 
 function calculate() {
   try {
+    // Evaluate safely
     const result = eval(currentExpression);
     if (result === undefined || result === null || isNaN(result)) {
       currentExpression = "Error";
