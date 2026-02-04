@@ -1,0 +1,182 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 95%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #111;
+  color: #fff;
+  font-weight:bolder;
+}
+
+/* App container fills screen */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:#fff;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #222;
+  border-bottom: 1px solid #333;
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.theme-toggle {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.theme-toggle:hover {
+  background: #666;
+}
+
+/* Calculator full-screen area */
+.calculator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Display */
+.display {
+  background:#fcf4f4;
+  color: #1a1616;
+  font-size: 2.4rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  height: 80px;
+  overflow-x: auto;
+}
+
+/* Buttons grid */
+.buttons {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(70px, 1fr);
+  gap: 10px;
+}
+
+/* Buttons base */
+button {
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #161313;
+  color: #fff;
+  transition: background 0.15s, transform 0.05s;
+}
+
+/* Operator buttons */
+button.op {
+  background:#534f4f ;
+}
+
+/* Special buttons */
+.equal {
+  background: #1bb616;
+}
+
+.clear {
+  background: #cc0000;
+}
+
+.backspace {
+  background: #ff9900;
+}
+
+/* Wide button (+) */
+.wide {
+  grid-column: span 2;
+}
+
+/* Hover & active (press animation) */
+button:hover {
+  background: #555;
+}
+
+button:active,
+button.key-press {
+  transform: scale(0.96);
+  background: #110404;
+}
+
+/* Dark mode & light mode themes */
+body.light {
+  background: #f4f4f4;
+  color: #222;
+}
+
+body.light .top-bar {
+  background: #e0e0e0;
+  border-bottom-color: #ccc;
+}
+
+body.light .display {
+  background: #fff;
+  color: #222;
+}
+
+body.light button {
+  background: #ddd;
+  color: #111;
+}
+
+body.light button:hover {
+  background: #ccc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .display {
+    font-size: 2.6rem;
+    height: 90px;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  .top-bar h1 {
+    font-size: 1rem;
+  }
+
+  .theme-toggle {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+

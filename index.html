@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="top-bar">
+      <h1>Calculator</h1>
+      <button id="themeToggle" class="theme-toggle">Dark mode</button>
+    </header>
+
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="/" class="op">÷</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="*" class="op">×</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="-" class="op">−</button>
+
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button id="equalBtn" class="equal">=</button>
+        <button id="clearBtn" class="clear">C</button>
+
+        <button data-value="+" class="op wide">+</button>
+        <button id="backspaceBtn" class="backspace">⌫</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- optional click sound (short, quiet) -->
+  <audio id="clickSound">
+    <source src="" type="audio/mpeg">
+    <!-- leave src empty, you can add your own mp3 file path later -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
